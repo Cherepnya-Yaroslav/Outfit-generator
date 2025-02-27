@@ -1,0 +1,131 @@
+.navContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.navContainer ul{
+    display: flex;
+}
+.navContainer ul li{
+    list-style: none;
+    margin-right: 20px;
+    font-size: 30px;
+}
+h2{
+    font-size: 35px;
+}
+.yourLooksH2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.navLink{
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s all;
+    padding: 10px;
+}
+.navLink:visited{
+    color: black;
+}
+.navLink:hover{
+    background: black;
+    color: white;
+}
+.startBtn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    height: 40.5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 16px;
+}
+.activeBtn{
+    transform: translateY(-3px); /* Поднимаем кнопку вверх */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+.btn-container{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    /*margin-top: 30px;*/
+    margin-bottom: 30px;
+}
+.outfitHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.galleryOutfits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.galleryOutfits h3{
+    margin-left: 20px;
+}
+.deleteBtn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+
+    height: 40.5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 16px;
+}
+.marginMinus30px{
+    margin-top: -30px;
+}
+.contentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clothesCard{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) ;
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+}
+.clothesCard img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+footer{
+    margin-top: 50%;
+}
+.file-input {
+    display: none; /* Полностью скрываем input */
+}
+.uploadedClothes{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+.categoryClothes{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 35px;
+}
