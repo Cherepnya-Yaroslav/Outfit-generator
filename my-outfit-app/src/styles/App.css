@@ -1,0 +1,575 @@
+.navContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.navContainer ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navContainer ul li{
+    list-style: none;
+    margin-right: 30px;
+    font-size: var(--h2-size);
+    font-weight: 500;
+}
+h2{
+    font-size: var(--h1-size);
+    font-weight: 600;
+    line-height: 1.2;
+}
+.yourLooksH2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: var(--h2-size);
+    font-weight: 600;
+    line-height: 1.2;
+}
+.navLink{
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s all;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+.navLink:visited{
+    color: black;
+}
+.navLink:hover{
+    background: black;
+    color: white;
+}
+.startBtn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    height: 40.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: var(--body-size);
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.activeBtn{
+    transform: translateY(-3px); /* Поднимаем кнопку вверх */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+.btn-container{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.outfitHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.galleryOutfits{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+.galleryOutfits h3{
+    margin-left: 20px;
+    text-align: center;
+}
+.deleteBtn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+
+    height: 40.5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: var(--body-size);
+    font-weight: 500;
+}
+.marginMinus30px{
+    margin-top: -30px;
+}
+.contentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px); /* Учитываем высоту футера и отступы */
+}
+.clothesCard{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background: white;
+}
+.clothesCard img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.file-input {
+    display: none;
+}
+.uploadedClothes{
+    padding: 0 20px;
+}
+.categoryClothes{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+.categoryClothes h3 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Gallery App Styles */
+.outfit-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
+.outfit-card:hover {
+    transform: translateY(-5px);
+}
+
+.outfit-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: var(--h3-size);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.outfitHolder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Clothes Card Styles */
+.clothes-card {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.clothes-card:hover {
+    transform: scale(1.05);
+}
+
+.clothes-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: var(--body-size);
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    min-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn:focus {
+    animation: buttonPress 0.3s ease;
+}
+
+@keyframes buttonPress {
+    0% {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navContainer {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navContainer ul {
+        margin-top: 20px;
+    }
+
+    .navContainer ul li {
+        font-size: var(--h2-size);
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: var(--h1-size);
+    }
+
+    .yourLooksH2 {
+        font-size: var(--h2-size);
+        margin: 1rem 0;
+    }
+
+    .clothesCard {
+        width: 130px;
+        height: 130px;
+    }
+
+    .clothesCard img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .galleryOutfits {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .outfit-card {
+        padding: 1rem;
+        width: calc(50% - 1.5rem);
+    }
+
+    .outfit-card h3 {
+        font-size: var(--h3-size);
+    }
+
+    .btn {
+        padding: 0.7rem 1.3rem;
+        font-size: var(--body-size);
+        min-width: 130px;
+    }
+
+    .btn-container {
+        margin: 1.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .navContainer ul li {
+        font-size: var(--h2-size);
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navContainer ul {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: var(--h1-size);
+    }
+
+    .yourLooksH2 {
+        font-size: var(--h2-size);
+        margin: 0.8rem 0;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .startBtn {
+        width: 90%;
+        max-width: 300px;
+        margin: 5px;
+    }
+
+    .clothesCard {
+        width: 110px;
+        height: 110px;
+    }
+
+    .clothesCard img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .categoryClothes {
+        justify-content: center;
+    }
+
+    .outfit-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .outfit-card h3 {
+        font-size: var(--h3-size);
+    }
+
+    .outfitHolder {
+        gap: 0.8rem;
+    }
+
+    .marginMinus30px {
+        margin-top: -15px;
+    }
+
+    .uploadedClothes {
+        padding: 0 10px;
+    }
+
+    .galleryOutfits {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.1rem;
+        font-size: var(--small-size);
+        min-width: 120px;
+    }
+
+    .btn-container {
+        margin: 1rem 0;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 10px;
+    }
+
+    .navContainer ul {
+        flex-direction: column;
+    }
+
+    .navContainer ul li {
+        font-size: var(--h2-size);
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navContainer ul {
+        justify-content: center;
+    }
+
+    .clothesCard {
+        width: 100px;
+        height: 100px;
+    }
+
+    .clothesCard img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: var(--small-size);
+        min-width: 110px;
+    }
+
+    .btn-container {
+        margin: 0.8rem 0;
+        gap: 0.6rem;
+    }
+}
+
+/* Base Typography */
+:root {
+    --h1-size: 2.5rem;      /* 40px */
+    --h2-size: 2rem;        /* 32px */
+    --h3-size: 1.5rem;      /* 24px */
+    --body-size: 1rem;      /* 16px */
+    --small-size: 0.875rem; /* 14px */
+}
+
+/* Navigation */
+.navContainer ul li {
+    font-size: var(--h2-size);
+    font-weight: 500;
+}
+
+/* Headings */
+h2 {
+    font-size: var(--h1-size);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.yourLooksH2 {
+    font-size: var(--h2-size);
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Cards */
+.outfit-card h3 {
+    font-size: var(--h3-size);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Buttons */
+.startBtn, .deleteBtn {
+    font-size: var(--body-size);
+    font-weight: 500;
+}
+
+.btn {
+    font-size: var(--body-size);
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    :root {
+        --h1-size: 2.25rem;    /* 36px */
+        --h2-size: 1.75rem;    /* 28px */
+        --h3-size: 1.25rem;    /* 20px */
+    }
+
+    .navContainer ul li {
+        font-size: var(--h2-size);
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --h1-size: 2rem;      /* 32px */
+        --h2-size: 1.5rem;    /* 24px */
+        --h3-size: 1.125rem;  /* 18px */
+    }
+
+    .navContainer ul li {
+        font-size: var(--h2-size);
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navContainer ul {
+        justify-content: center;
+    }
+
+    .btn {
+        font-size: var(--small-size);
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --h1-size: 1.75rem;   /* 28px */
+        --h2-size: 1.25rem;   /* 20px */
+        --h3-size: 1rem;      /* 16px */
+    }
+
+    .btn {
+        font-size: var(--small-size);
+    }
+}
+
+.startBtn:active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.startBtn:focus {
+    animation: buttonPress 0.3s ease;
+}
+
+@keyframes buttonPress {
+    0% {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
